@@ -10,6 +10,8 @@ def sum(m, n):
     return m
 
 def divide(m, n):
+    #if n < 0
+    #    exception
     result = 0
     negativeResult = m > 0 and n < 0 or m < 0 and n > 0
     n = abs(n)
@@ -17,22 +19,10 @@ def divide(m, n):
     while (m - n) >= 0:
         m -= n
         result += 1
+
+    #result -= result if negativeResult else result
     
     if negativeResult:
         return -result
     else:
         return result
-
-#print(divide(0,0))
-#print(divide(1,0))
-print(divide(0,1))
-#print(divide(1,1))
-#print(divide(3,1))
-#print(divide(1,3))
-#print(divide(-1,0))
-#print(divide(0,-1))
-#print(divide(-1,-1))
-#print(divide(1,-1))
-#print(divide(5,-1))
-#print(divide(-1,1))
-#print(divide(-5,1))
