@@ -2,16 +2,16 @@
 
 def sum(m, n):
     if n < 0:
-        for x in range(abs(n)):
+        for _x in range(abs(n)):
             m -= 1
     else:
-        for x in range(n):
+        for _x in range(n):
             m += 1
     return m
 
 def divide(m, n):
-    #if n < 0
-    #    exception
+    if n == 0:
+        raise ZeroDivisionError
     result = 0
     negativeResult = m > 0 and n < 0 or m < 0 and n > 0
     n = abs(n)
